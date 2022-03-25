@@ -10,12 +10,54 @@
 </head>
 <body>
     <h1 id="titulo-principal">Ejemplos de CSS útiles</h1>
+    
     <div class="main-container center">
         <h1>Truncado de texto:</h1>
         <p>Si se hace doble click se selecciona todo el texto, aunque no se puede recorrer</p>
-        <br>
-        <h3 id="texto-truncado">Texto que vamos a truncar y poner tres puntos a continuación bla bla bla bla bla bla</h1>
+        <fieldset>
+            <legend>ejemplo</legend>
+            <h3 id="texto-truncado">Texto que vamos a truncar y poner tres puntos a continuación bla bla bla bla bla bla</h1>
+        </fieldset>
+        <fieldset>
+            <legend>código</legend>
+            <pre>
+                width: 30%;
+                border: 2px solid;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; 
+            </pre>
+        </fieldset>
         <hr>
+        <!-- -------------------------------------------------------------------------- -->
+        <h1>Centrado de contenido:</h1>
+        <p>Centrar un bloque o cualquier elemento al centro</p>
+        <fieldset>
+            <legend>ejemplo</legend>
+            <div class="flex-center">
+                <p>Estos</p>
+                <p>textos</p>
+                <p>están centrados</p>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>código</legend>
+            <pre>
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+            </pre>
+        </fieldset>
+        <hr>
+        <!-- 
+        <fieldset>
+            <legend>ejemplo</legend>
+        </fieldset>
+        <fieldset>
+            <legend>código</legend>
+        </fieldset>
+     -->
     </div>
 </body>
 </html>
