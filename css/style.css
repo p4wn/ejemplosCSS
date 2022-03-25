@@ -89,7 +89,15 @@ fieldset {
 
 .container-parallax {
     background-image: url(https://www.ionos.es/digitalguide/fileadmin/DigitalGuide/Teaser/parallax-effect-t.jpg);
-    height: 5vw;
+    height: 10vw;
     background-attachment: fixed;
     background-size: cover;
+}
+
+#nombre:required {
+    border: 2px solid red;
+}
+
+#apellidos:optional {
+    border: 2px solid black;
 }

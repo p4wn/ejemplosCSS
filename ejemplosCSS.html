@@ -71,7 +71,7 @@ p:first-child::first-letter{
          <hr>
          <!-- -------------------------------------------------------------------------- -->
          <h1>Efecto parallax</h1>
-         <p>La imagen se fixea y genera una sensación de fondo extra</p>
+         <p>La imagen se fixea y genera una sensación de fondo independiente</p>
          <fieldset>
              <legend>ejemplo</legend>
              <div class="container-parallax">
@@ -88,6 +88,36 @@ background-size: cover;
              </pre>
          </fieldset>
          <hr>
+        <!-- -------------------------------------------------------------------------- -->
+        <h1>Campos obligatorios formulario</h1>
+        <p>Remarca en rojo los campos que son obligatorios en un formulario y los opcionales con marco negro</p>
+        <fieldset>
+            <legend>ejemplo</legend>
+            <div class="container-form-required">
+                <label for="nombre">Nombre: <input type="text" name="nombre" id="nombre" required></label>
+                <label for="apellidos">Apellidos: <input type="text" name="apellidos" id="apellidos"></label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>código</legend>
+            <pre>
+HTML:
+&lt;div class="container-form-required">
+    &lt;label for="nombre">Nombre: &lt;input type="text" name="nombre" id="nombre" required>&lt;/label>
+    &lt;label for="apellidos">Apellidos: &lt;input type="text" name="apellidos" id="apellidos">&lt;/label>
+&lt;/div>
+
+CSS:
+#nombre:required {
+    border: 2px solid red;
+}
+
+#apellidos:optional {
+    border: 2px solid black;
+}
+            </pre>
+        </fieldset>
+        <hr>
     </div>
 </body>
 </html>
