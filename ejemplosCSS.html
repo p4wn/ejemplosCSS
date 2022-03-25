@@ -21,11 +21,11 @@
         <fieldset>
             <legend>código</legend>
             <pre>
-                width: 30%;
-                border: 2px solid;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis; 
+width: 30%;
+border: 2px solid;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis; 
             </pre>
         </fieldset>
         <hr>
@@ -43,21 +43,51 @@
         <fieldset>
             <legend>código</legend>
             <pre>
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
             </pre>
         </fieldset>
         <hr>
-        <!-- 
-        <fieldset>
-            <legend>ejemplo</legend>
-        </fieldset>
-        <fieldset>
-            <legend>código</legend>
-        </fieldset>
-     -->
+         <!-- -------------------------------------------------------------------------- -->
+         <h1>Primera letra grande</h1>
+         <p>Aumentar la primera letra del párrafo a un tamaño superior al resto</p>
+         <fieldset>
+             <legend>ejemplo</legend>
+             <div class="container-letra-grande">
+                 <p>Esta letra E debería ser mucho más grande que el resto</p>
+             </div>
+         </fieldset>
+         <fieldset>
+             <legend>código</legend>
+             <pre>
+p:first-child::first-letter{
+    font-size: 200%;
+    font-weight: bold;
+}
+             </pre>
+         </fieldset>
+         <hr>
+         <!-- -------------------------------------------------------------------------- -->
+         <h1>Efecto parallax</h1>
+         <p>La imagen se fixea y genera una sensación de fondo extra</p>
+         <fieldset>
+             <legend>ejemplo</legend>
+             <div class="container-parallax">
+                 <p>PARALLAX</p>
+             </div>
+         </fieldset>
+         <fieldset>
+             <legend>código</legend>
+             <pre>
+p:first-child::first-letter{
+    font-size: 200%;
+    font-weight: bold;
+}
+             </pre>
+         </fieldset>
+         <hr>
     </div>
 </body>
 </html>

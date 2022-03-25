@@ -29,10 +29,10 @@ hr {
 }
 
 legend {
-    color: white;
     margin-left: 1vw;
-    padding: 0.3em;
-    text-shadow: 0 0 .1vw black, 0 0 .1vw black, 0 0 .2vw black;
+    padding: 0 1em;
+    border-radius: 10px;
+    background-color: white;
 }
 
 fieldset {
@@ -80,4 +80,16 @@ fieldset {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; 
+}
+
+.container-letra-grande p:first-child::first-letter{
+    font-size: 200%;
+    font-weight: bold;
+}
+
+.container-parallax {
+    background-image: url(https://www.ionos.es/digitalguide/fileadmin/DigitalGuide/Teaser/parallax-effect-t.jpg);
+    height: 5vw;
+    background-attachment: fixed;
+    background-size: cover;
 }
