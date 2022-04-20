@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplos CSS útiles</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="{% static 'js/main.js' %}" defer></script>
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
     <h1 id="titulo-principal">Ejemplos de CSS útiles</h1>
@@ -15,11 +15,11 @@
         <h1>Truncado de texto:</h1>
         <p>Si se hace doble click se selecciona todo el texto, aunque no se puede recorrer</p>
         <fieldset>
-            <legend>ejemplo</legend>
+            <legend><span class="ejemplo">ejemplo</span></legend>
             <h3 id="texto-truncado">Texto que vamos a truncar y poner tres puntos a continuación bla bla bla bla bla bla</h1>
         </fieldset>
         <fieldset>
-            <legend>código</legend>
+            <legend><span class="codigo">código</span></legend>
             <pre>
 width: 30%;
 border: 2px solid;
@@ -33,7 +33,7 @@ text-overflow: ellipsis;
         <h1>Centrado de contenido:</h1>
         <p>Centrar un bloque o cualquier elemento al centro</p>
         <fieldset>
-            <legend>ejemplo</legend>
+            <legend><span class="ejemplo">ejemplo</span></legend>
             <div class="flex-center">
                 <p>Estos</p>
                 <p>textos</p>
@@ -41,7 +41,7 @@ text-overflow: ellipsis;
             </div>
         </fieldset>
         <fieldset>
-            <legend>código</legend>
+            <legend><span class="codigo">código</span></legend>
             <pre>
 display: flex;
 align-items: center;
@@ -54,13 +54,13 @@ justify-content: center;
          <h1>Primera letra grande</h1>
          <p>Aumentar la primera letra del párrafo a un tamaño superior al resto</p>
          <fieldset>
-             <legend>ejemplo</legend>
+             <legend><span class="ejemplo">ejemplo</span></legend>
              <div class="container-letra-grande">
                  <p>Esta letra E debería ser mucho más grande que el resto</p>
              </div>
          </fieldset>
          <fieldset>
-             <legend>código</legend>
+             <legend><span class="codigo">código</span></legend>
              <pre>
 p:first-child::first-letter{
     font-size: 200%;
@@ -73,13 +73,13 @@ p:first-child::first-letter{
          <h1>Efecto parallax</h1>
          <p>La imagen se fixea y genera una sensación de fondo independiente</p>
          <fieldset>
-             <legend>ejemplo</legend>
+             <legend><span class="ejemplo">ejemplo</span></legend>
              <div class="container-parallax">
                  <p>PARALLAX</p>
              </div>
          </fieldset>
          <fieldset>
-             <legend>código</legend>
+             <legend><span class="codigo">código</span></legend>
              <pre>
 background-image: url(https://www.ionos.es/digitalguide/fileadmin/DigitalGuide/Teaser/parallax-effect-t.jpg);
 height: 5vw;
@@ -92,14 +92,14 @@ background-size: cover;
         <h1>Campos obligatorios formulario</h1>
         <p>Remarca en rojo los campos que son obligatorios en un formulario y los opcionales con marco negro</p>
         <fieldset>
-            <legend>ejemplo</legend>
+            <legend><span class="ejemplo">ejemplo</span></legend>
             <div class="container-form-required">
                 <label for="nombre">Nombre: <input type="text" name="nombre" id="nombre" required></label>
                 <label for="apellidos">Apellidos: <input type="text" name="apellidos" id="apellidos"></label>
             </div>
         </fieldset>
         <fieldset>
-            <legend>código</legend>
+            <legend><span class="codigo">código</span></legend>
             <pre>
 HTML:
 &lt;div class="container-form-required">
@@ -118,6 +118,49 @@ CSS:
             </pre>
         </fieldset>
         <hr>
+        <!-- -------------------------------------------------------------------------- -->
+        <h1>Reloj digital:</h1>
+        <p>Mostrar un reloj digital en tiempo real para obtener la hora desde la web</p>
+        <fieldset>
+            <legend><span class="ejemplo">ejemplo</span></legend>
+            <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+        </fieldset>
+        <fieldset>
+            <legend><span class="codigo">código</span></legend>
+            <pre>
+function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();
+            </pre>
+        </fieldset>
+        <hr>
+         <!-- -------------------------------------------------------------------------- -->
     </div>
 </body>
 </html>

@@ -75,6 +75,19 @@ fieldset {
                0 20px 20px rgba(0,0,0,.15);
 }
 
+.clock {
+    font-size: 60px;
+    letter-spacing: 7px;
+}
+
+.ejemplo {
+    color: blue;
+}
+
+.codigo {
+    color: orangered;
+}
+
 #texto-truncado {
     width: 30%;
     white-space: nowrap;
