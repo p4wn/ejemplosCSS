@@ -21,11 +21,13 @@
         <fieldset>
             <legend><span class="codigo">código</span></legend>
             <pre>
+                <code>
 width: 30%;
 border: 2px solid;
 white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis; 
+                </code>
             </pre>
         </fieldset>
         <hr>
@@ -43,10 +45,12 @@ text-overflow: ellipsis;
         <fieldset>
             <legend><span class="codigo">código</span></legend>
             <pre>
+                <code>
 display: flex;
 align-items: center;
 flex-direction: column;
 justify-content: center;
+                </code>
             </pre>
         </fieldset>
         <hr>
@@ -62,10 +66,12 @@ justify-content: center;
          <fieldset>
              <legend><span class="codigo">código</span></legend>
              <pre>
+                 <code>
 p:first-child::first-letter{
     font-size: 200%;
     font-weight: bold;
 }
+                 </code>
              </pre>
          </fieldset>
          <hr>
@@ -81,10 +87,12 @@ p:first-child::first-letter{
          <fieldset>
              <legend><span class="codigo">código</span></legend>
              <pre>
+                 <code>
 background-image: url(https://www.ionos.es/digitalguide/fileadmin/DigitalGuide/Teaser/parallax-effect-t.jpg);
 height: 5vw;
 background-attachment: fixed;
 background-size: cover;
+                 </code>
              </pre>
          </fieldset>
          <hr>
@@ -101,6 +109,7 @@ background-size: cover;
         <fieldset>
             <legend><span class="codigo">código</span></legend>
             <pre>
+                <code>
 HTML:
 &lt;div class="container-form-required">
     &lt;label for="nombre">Nombre: &lt;input type="text" name="nombre" id="nombre" required>&lt;/label>
@@ -115,6 +124,7 @@ CSS:
 #apellidos:optional {
     border: 2px solid black;
 }
+                </code>
             </pre>
         </fieldset>
         <hr>
@@ -128,6 +138,7 @@ CSS:
         <fieldset>
             <legend><span class="codigo">código</span></legend>
             <pre>
+                <code>
 function showTime(){
     var date = new Date();
     var h = date.getHours(); // 0 - 23
@@ -157,9 +168,28 @@ function showTime(){
 }
 
 showTime();
+                </code>
             </pre>
         </fieldset>
         <hr>
+         <!-- -------------------------------------------------------------------------- -->
+         <h1>Mandar email a contacto</h1>
+         <p>Crear un enlace para mandar al destinatario indicado un mail</p>
+         <fieldset>
+             <legend><span class="ejemplo">ejemplo</span></legend>
+             <address>Murcia, España</address>
+             <small>&copy;2022 <a href="mailto:josedaniel2544@gmail.com">Mandar mail a Jose Daniel</a></small>
+         </fieldset>
+         <fieldset>
+             <legend><span class="codigo">código</span></legend>
+             <pre>
+                 <code>
+&lt;address>Murcia, España&lt;/address>
+&lt;small>&copy;2022 &lt;a href="mailto:josedaniel2544@gmail.com">Mandar mail a Jose Daniel&lt;/a>&lt;/small>
+                 </code>
+             </pre>
+         </fieldset>
+         <hr>
          <!-- -------------------------------------------------------------------------- -->
     </div>
 </body>
