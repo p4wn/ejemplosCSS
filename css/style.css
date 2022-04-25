@@ -70,14 +70,22 @@ fieldset {
 
 .ejemplo {
     color: blue;
+    text-shadow: 1px 1px 2px black;
 }
 
 .html {
     color: red;
+    text-shadow: 1px 1px 2px black;
 }
 
 .css {
     color: green;
+    text-shadow: 1px 1px 2px black;
+}
+
+.script {
+    color: orange;
+    text-shadow: 1px 1px 2px black;
 }
 
 #texto-truncado {

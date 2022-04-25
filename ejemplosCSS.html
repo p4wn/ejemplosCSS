@@ -150,32 +150,22 @@
             <legend><span class="html">HTML</span></legend>
             <pre>
                 <code>
-HTML:
 &lt;div class="container-form-required">
     &lt;label for="nombre">Nombre: &lt;input type="text" name="nombre" id="nombre" required>&lt;/label>
     &lt;label for="apellidos">Apellidos: &lt;input type="text" name="apellidos" id="apellidos">&lt;/label>
 &lt;/div>
-
-CSS:
-#nombre:required {
-    border: 2px solid red;
-}
-
-#apellidos:optional {
-    border: 2px solid black;
-}
                 </code></pre>
         </fieldset>
         <fieldset>
             <legend><span class="css">CSS</span></legend>
             <pre>
                 <code>
-details {
-    cursor: pointer;
+#nombre:required {
+    border: 2px solid red;
 }
 
-details ul {
-    margin-left: 2em;
+#apellidos:optional {
+    border: 2px solid black;
 }
                 </code></pre>
         </fieldset>
@@ -189,6 +179,23 @@ details ul {
         </fieldset>
         <fieldset>
             <legend><span class="html">HTML</span></legend>
+            <pre>
+                 <code>
+&lt;div id="MyClockDisplay" class="clock" onload="showTime&lt;/div>
+                 </code></pre>
+        </fieldset>
+        <fieldset>
+            <legend><span class="css">CSS</span></legend>
+            <pre>
+                <code>
+.clock {
+    font-size: 60px;
+    letter-spacing: 7px;
+}
+                </code></pre>
+        </fieldset>
+        <fieldset>
+            <legend><span class="script">JavaScript</span></legend>
             <pre>
                 <code>
 function showTime(){
@@ -222,19 +229,6 @@ function showTime(){
 showTime();
                 </code></pre>
         </fieldset>
-        <fieldset>
-            <legend><span class="css">CSS</span></legend>
-            <pre>
-                <code>
-details {
-    cursor: pointer;
-}
-
-details ul {
-    margin-left: 2em;
-}
-                </code></pre>
-        </fieldset>
         <hr>
         <!-- -------------------------------------------------------------------------- -->
         <h1>Mandar email a contacto</h1>
@@ -251,19 +245,6 @@ details ul {
 &lt;address>Murcia, España&lt;/address>
 &lt;small>&copy;2022 &lt;a href="mailto:josedaniel2544@gmail.com">Mandar mail a Jose Daniel&lt;/a>&lt;/small>
                  </code></pre>
-        </fieldset>
-        <fieldset>
-            <legend><span class="css">CSS</span></legend>
-            <pre>
-                <code>
-details {
-    cursor: pointer;
-}
-
-details ul {
-    margin-left: 2em;
-}
-                </code></pre>
         </fieldset>
         <hr>
         <!-- -------------------------------------------------------------------------- -->
@@ -310,6 +291,61 @@ details ul {
     margin-left: 2em;
 }
                 </code></pre>
+        </fieldset>
+        <hr>
+        <!-- -------------------------------------------------------------------------- -->
+        <h1>Formulario</h1>
+        <p>Ejemplo de maqueta de formulario con la mayoria de posibilidades</p>
+        <fieldset>
+            <legend><span class="ejemplo">ejemplo</span></legend>
+            <form action="url" method="post" enctype="multipart/form-data">
+                <p><label>Nombre: <input type="text" name="nombre" id="nombre" placeholder="Inserte el nombre" maxlength="20"></label></p>
+                <p><label>Edad: <input type="number" name="edad" id="edad" value="33" min="18" max="100"></label></p>
+                <p><label>Correo: <input type="email" name="email" id="email"></label></p>
+                <p><label>Teléfono: <input type="tel"></label></p>
+                <p><label>Sitio web: <input type="url" name="url" id="url"></label></p>
+                <p><label for="range">Rango: <input type="range" name="range" id="range" min="0" max="100"></label></p>
+                <p>Rangos con radios:</p>
+                <p><label for="radio">25: <input type="radio" name="radioTest" id="radioTest1" value="25" checked></label></p>
+                <p><label for="radio">50: <input type="radio" name="radioTest" id="radioTest2" value="50"></label></p>
+                <p><label for="radio">75: <input type="radio" name="radioTest" id="radioTest3" value="75"></label></p>
+                <p><label for="radio">100: <input type="radio" name="radioTest" id="radioTest4" value="100"></label></p>
+                <p>Checkboxes:</p>
+                <p><label for="check">25 <input type="checkbox" name="check" id="check1"></label></p>
+                <p><label for="check">50 <input type="checkbox" name="check" id="check1"></label></p>
+                <p><label for="check">75 <input type="checkbox" name="check" id="check1"></label></p>
+                <p><label for="check">100 <input type="checkbox" name="check" id="check1"></label></p>
+                <p><label for="fecha">Fecha: <input type="date" name="fecha" id="fecha"></label></p>
+                <p><label for="color">Seleccione un color: <input type="color" name="color" id="color"></label></p>
+                <button type="submit">Enviar</button>
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend><span class="html">HTML</span></legend>
+            <pre>
+                 <code>
+&lt;form action="url" method="post" enctype="multipart/form-data">
+    &lt;p>&lt;label>Nombre: &lt;input type="text" name="nombre" id="nombre" placeholder="Inserte el nombre" maxlength="20">&lt;/label>&lt;/p>
+    &lt;p>&lt;label>Edad: &lt;input type="number" name="edad" id="edad" value="33" min="18" max="100">&lt;/label>&lt;/p>
+    &lt;p>&lt;label>Correo: &lt;input type="email" name="email" id="email">&lt;/label>&lt;/p>
+    &lt;p>&lt;label>Teléfono: &lt;input type="tel">&lt;/label>&lt;/p>
+    &lt;p>&lt;label>Sitio web: &lt;input type="url" name="url" id="url">&lt;/label>&lt;/p>
+    &lt;p>&lt;label for="range">Rango: &lt;input type="range" name="range" id="range" min="0" max="100">&lt;/label>&lt;/p>
+    &lt;p>&lt;angos con radios:&lt;/p>
+    &lt;p>&lt;label for="radio">25: &lt;input type="radio" name="radioTest" id="radioTest1" value="25" checked>&lt;/label>&lt;/p>
+    &lt;p>&lt;label for="radio">50: &lt;input type="radio" name="radioTest" id="radioTest2" value="50">&lt;/label>&lt;/p>
+    &lt;p>&lt;label for="radio">75: &lt;input type="radio" name="radioTest" id="radioTest3" value="75">&lt;/label>&lt;/p>
+    &lt;p>&lt;label for="radio">100: &lt;input type="radio" name="radioTest" id="radioTest4" value="100">&lt;/label>&lt;/p>
+    &lt;p>&lt;heckboxes:&lt;/p>
+    &lt;p>&lt;label for="check">25 &lt;input type="checkbox" name="check" id="check1">&lt;/label>&lt;/p>
+    &lt;p>&lt;label for="check">50 &lt;input type="checkbox" name="check" id="check1">&lt;/label>&lt;/p>
+    &lt;p>&lt;label for="check">75 &lt;input type="checkbox" name="check" id="check1">&lt;/label>&lt;/p>
+    &lt;p>&lt;label for="check">100 &lt;input type="checkbox" name="check" id="check1">&lt;/label>&lt;/p>
+    &lt;p>&lt;label for="fecha">Fecha: &lt;input type="date" name="fecha" id="fecha">&lt;/label>&lt;/p>
+    &lt;p>&lt;label for="color">Seleccione un color: &lt;input type="color" name="color" id="color">&lt;/label>&lt;/p>
+    &lt;button type="submit">Enviar&lt;/button>
+&lt;/form>
+                 </code></pre>
         </fieldset>
         <hr>
         <!-- -------------------------------------------------------------------------- -->
