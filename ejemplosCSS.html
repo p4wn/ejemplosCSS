@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,27 +9,36 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="scripts/main.js" defer></script>
 </head>
+
 <body>
     <h1 id="titulo-principal">Ejemplos de CSS útiles</h1>
-    
+
     <div class="main-container center">
         <h1>Truncado de texto:</h1>
         <p>Si se hace doble click se selecciona todo el texto, aunque no se puede recorrer</p>
         <fieldset>
             <legend><span class="ejemplo">ejemplo</span></legend>
-            <h3 id="texto-truncado">Texto que vamos a truncar y poner tres puntos a continuación bla bla bla bla bla bla</h1>
+            <h3 id="texto-truncado">Texto que vamos a truncar y poner tres puntos a continuación bla bla bla bla bla bla
+                </h1>
         </fieldset>
         <fieldset>
-            <legend><span class="codigo">código</span></legend>
+            <legend><span class="html">HTML</span></legend>
             <pre>
                 <code>
-width: 30%;
-border: 2px solid;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis; 
-                </code>
-            </pre>
+&lt;h3 id="texto-truncado">Texto que vamos a truncar y poner tres puntos a continuación bla bla bla bla bla bla&lt;/h1>
+                </code></pre>
+        </fieldset>
+        <fieldset>
+            <legend><span class="css">CSS</span></legend>
+            <pre>
+                <code>
+#texto-truncado {
+    width: 30%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+                </code></pre>
         </fieldset>
         <hr>
         <!-- -------------------------------------------------------------------------- -->
@@ -43,59 +53,89 @@ text-overflow: ellipsis;
             </div>
         </fieldset>
         <fieldset>
-            <legend><span class="codigo">código</span></legend>
+            <legend><span class="html">HTML</span></legend>
             <pre>
                 <code>
-display: flex;
-align-items: center;
-flex-direction: column;
-justify-content: center;
-                </code>
-            </pre>
+&lt;div class="flex-center">
+    &lt;p>Estos&lt;/p>
+    &lt;p>textos&lt;/p>
+    &lt;p>están centrados&lt;/p>
+&lt;/div>
+                </code></pre>
+        </fieldset>
+        <fieldset>
+            <legend><span class="css">CSS</span></legend>
+            <pre>
+                <code>
+.flex-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+                </code></pre>
         </fieldset>
         <hr>
-         <!-- -------------------------------------------------------------------------- -->
-         <h1>Primera letra grande</h1>
-         <p>Aumentar la primera letra del párrafo a un tamaño superior al resto</p>
-         <fieldset>
-             <legend><span class="ejemplo">ejemplo</span></legend>
-             <div class="container-letra-grande">
-                 <p>Esta letra E debería ser mucho más grande que el resto</p>
-             </div>
-         </fieldset>
-         <fieldset>
-             <legend><span class="codigo">código</span></legend>
-             <pre>
-                 <code>
-p:first-child::first-letter{
+        <!-- -------------------------------------------------------------------------- -->
+        <h1>Primera letra grande</h1>
+        <p>Aumentar la primera letra del párrafo a un tamaño superior al resto</p>
+        <fieldset>
+            <legend><span class="ejemplo">ejemplo</span></legend>
+            <div class="container-letra-grande">
+                <p>Esta letra E debería ser mucho más grande que el resto</p>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><span class="html">HTML</span></legend>
+            <pre>
+                <code>
+&lt;div class="container-letra-grande">
+    &lt;p>Esta letra E debería ser mucho más grande que el resto&lt;/p>
+&lt;/div>
+                </code></pre>
+        </fieldset>
+        <fieldset>
+            <legend><span class="css">CSS</span></legend>
+            <pre>
+                <code>
+.container-letra-grande p:first-child::first-letter{
     font-size: 200%;
     font-weight: bold;
 }
-                 </code>
-             </pre>
-         </fieldset>
-         <hr>
-         <!-- -------------------------------------------------------------------------- -->
-         <h1>Efecto parallax</h1>
-         <p>La imagen se fixea y genera una sensación de fondo independiente</p>
-         <fieldset>
-             <legend><span class="ejemplo">ejemplo</span></legend>
-             <div class="container-parallax">
-                 <p>PARALLAX</p>
-             </div>
-         </fieldset>
-         <fieldset>
-             <legend><span class="codigo">código</span></legend>
-             <pre>
+                </code></pre>
+        </fieldset>
+        <hr>
+        <!-- -------------------------------------------------------------------------- -->
+        <h1>Efecto parallax</h1>
+        <p>La imagen se fixea y genera una sensación de fondo independiente</p>
+        <fieldset>
+            <legend><span class="ejemplo">ejemplo</span></legend>
+            <div class="container-parallax">
+                <p>PARALLAX</p>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><span class="html">HTML</span></legend>
+            <pre>
                  <code>
-background-image: url(https://www.ionos.es/digitalguide/fileadmin/DigitalGuide/Teaser/parallax-effect-t.jpg);
-height: 5vw;
-background-attachment: fixed;
-background-size: cover;
-                 </code>
-             </pre>
-         </fieldset>
-         <hr>
+&lt;div class="container-parallax">
+    &lt;p>PARALLAX&lt;/p>
+&lt;/div>
+                 </code></pre>
+        </fieldset>
+        <fieldset>
+            <legend><span class="css">CSS</span></legend>
+            <pre>
+                <code>
+.container-parallax {
+    background-image: url(https://www.ionos.es/digitalguide/fileadmin/DigitalGuide/Teaser/parallax-effect-t.jpg);
+    height: 10vw;
+    background-attachment: fixed;
+    background-size: cover;
+}
+                </code></pre>
+        </fieldset>
+        <hr>
         <!-- -------------------------------------------------------------------------- -->
         <h1>Campos obligatorios formulario</h1>
         <p>Remarca en rojo los campos que son obligatorios en un formulario y los opcionales con marco negro</p>
@@ -107,7 +147,7 @@ background-size: cover;
             </div>
         </fieldset>
         <fieldset>
-            <legend><span class="codigo">código</span></legend>
+            <legend><span class="html">HTML</span></legend>
             <pre>
                 <code>
 HTML:
@@ -124,8 +164,20 @@ CSS:
 #apellidos:optional {
     border: 2px solid black;
 }
-                </code>
-            </pre>
+                </code></pre>
+        </fieldset>
+        <fieldset>
+            <legend><span class="css">CSS</span></legend>
+            <pre>
+                <code>
+details {
+    cursor: pointer;
+}
+
+details ul {
+    margin-left: 2em;
+}
+                </code></pre>
         </fieldset>
         <hr>
         <!-- -------------------------------------------------------------------------- -->
@@ -136,7 +188,7 @@ CSS:
             <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
         </fieldset>
         <fieldset>
-            <legend><span class="codigo">código</span></legend>
+            <legend><span class="html">HTML</span></legend>
             <pre>
                 <code>
 function showTime(){
@@ -168,29 +220,122 @@ function showTime(){
 }
 
 showTime();
-                </code>
-            </pre>
+                </code></pre>
+        </fieldset>
+        <fieldset>
+            <legend><span class="css">CSS</span></legend>
+            <pre>
+                <code>
+details {
+    cursor: pointer;
+}
+
+details ul {
+    margin-left: 2em;
+}
+                </code></pre>
         </fieldset>
         <hr>
-         <!-- -------------------------------------------------------------------------- -->
-         <h1>Mandar email a contacto</h1>
-         <p>Crear un enlace para mandar al destinatario indicado un mail</p>
-         <fieldset>
-             <legend><span class="ejemplo">ejemplo</span></legend>
-             <address>Murcia, España</address>
-             <small>&copy;2022 <a href="mailto:josedaniel2544@gmail.com">Mandar mail a Jose Daniel</a></small>
-         </fieldset>
-         <fieldset>
-             <legend><span class="codigo">código</span></legend>
-             <pre>
+        <!-- -------------------------------------------------------------------------- -->
+        <h1>Mandar email a contacto</h1>
+        <p>Crear un enlace para mandar al destinatario indicado un mail</p>
+        <fieldset>
+            <legend><span class="ejemplo">ejemplo</span></legend>
+            <address>Murcia, España</address>
+            <small>&copy;2022 <a href="mailto:josedaniel2544@gmail.com">Mandar mail a Jose Daniel</a></small>
+        </fieldset>
+        <fieldset>
+            <legend><span class="html">HTML</span></legend>
+            <pre>
                  <code>
 &lt;address>Murcia, España&lt;/address>
 &lt;small>&copy;2022 &lt;a href="mailto:josedaniel2544@gmail.com">Mandar mail a Jose Daniel&lt;/a>&lt;/small>
-                 </code>
-             </pre>
-         </fieldset>
-         <hr>
-         <!-- -------------------------------------------------------------------------- -->
+                 </code></pre>
+        </fieldset>
+        <fieldset>
+            <legend><span class="css">CSS</span></legend>
+            <pre>
+                <code>
+details {
+    cursor: pointer;
+}
+
+details ul {
+    margin-left: 2em;
+}
+                </code></pre>
+        </fieldset>
+        <hr>
+        <!-- -------------------------------------------------------------------------- -->
+        <h1>Detalles y sumarios</h1>
+        <p>A modo de ayuda podemos crear detalles con sumarios desplegables</p>
+        <fieldset>
+            <legend><span class="ejemplo">ejemplo</span></legend>
+            <details>
+                <summary>Mis juegos</summary>
+                <ul>
+                    <li>GTA</li>
+                    <li>Age of empires</li>
+                    <li>SOMA</li>
+                    <li>Total war</li>
+                    <li>Theme hospital</li>
+                </ul>
+            </details>
+        </fieldset>
+        <fieldset>
+            <legend><span class="html">HTML</span></legend>
+            <pre>
+                 <code>
+&lt;details>
+    &lt;summary>Mis juegos</summary>
+    &lt;ul>
+        &lt;li>GTA</li>
+        &lt;li>Age of empires</li>
+        &lt;li>SOMA</li>
+        &lt;li>Total war</li>
+        &lt;li>Theme hospital</li>
+    &lt;/ul>
+&lt;/details>
+                 </code></pre>
+        </fieldset>
+        <fieldset>
+            <legend><span class="css">CSS</span></legend>
+            <pre>
+                <code>
+details {
+    cursor: pointer;
+}
+
+details ul {
+    margin-left: 2em;
+}
+                </code></pre>
+        </fieldset>
+        <hr>
+        <!-- -------------------------------------------------------------------------- -->
+        <h1>Título</h1>
+        <p>Descripcion</p>
+        <fieldset>
+            <legend><span class="ejemplo">ejemplo</span></legend>
+
+        </fieldset>
+        <fieldset>
+            <legend><span class="html">HTML</span></legend>
+            <pre>
+                 <code>
+
+                 </code></pre>
+        </fieldset>
+        <fieldset>
+            <legend><span class="css">CSS</span></legend>
+            <pre>
+                <code>
+
+                </code></pre>
+        </fieldset>
+        <hr>
+        <!-- -------------------------------------------------------------------------- -->
     </div>
 </body>
+
 </html>
