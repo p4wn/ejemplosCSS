@@ -49,13 +49,6 @@ fieldset {
     padding: 1rem;
 }
 
-.flex-center {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-
 #titulo-principal {
     color: white;
     padding: 0.3em;
@@ -75,17 +68,16 @@ fieldset {
                0 20px 20px rgba(0,0,0,.15);
 }
 
-.clock {
-    font-size: 60px;
-    letter-spacing: 7px;
-}
-
 .ejemplo {
     color: blue;
 }
 
-.codigo {
-    color: orangered;
+.html {
+    color: red;
+}
+
+.css {
+    color: green;
 }
 
 #texto-truncado {
@@ -93,6 +85,13 @@ fieldset {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; 
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .container-letra-grande p:first-child::first-letter{
@@ -107,10 +106,23 @@ fieldset {
     background-size: cover;
 }
 
+.clock {
+    font-size: 60px;
+    letter-spacing: 7px;
+}
+
 #nombre:required {
     border: 2px solid red;
 }
 
 #apellidos:optional {
     border: 2px solid black;
+}
+
+details {
+    cursor: pointer;
+}
+
+details ul {
+    margin-left: 2em;
 }
