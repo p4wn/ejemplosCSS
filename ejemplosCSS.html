@@ -317,7 +317,24 @@ details ul {
                 <p><label for="check">100 <input type="checkbox" name="check" id="check1"></label></p>
                 <p><label for="fecha">Fecha: <input type="date" name="fecha" id="fecha"></label></p>
                 <p><label for="color">Seleccione un color: <input type="color" name="color" id="color"></label></p>
+                <p><label for="texto">Texto: <textarea name="texto" id="texto" cols="30" rows="3"></textarea></label></p>
+                <p><label for="lista">Listado select:</label>
+                    <select name="listado" id="listado">
+                        <option value="1">HTML</option>
+                        <option value="2">CSS</option>
+                        <option value="3">JavaScript</option>
+                        <option value="4">Python</option>
+                    </select>
+                </p>
+                <p>
+                    <datalist id="telefonos">
+                        <option value="123456789" label="Benito"></option>
+                        <option value="987654321" label="Maruja"></option>
+                    </datalist>
+                </p>
+                <p><label>Teléfono: <input type="tel" name="telefonos" id="telefonos" list="telefonos"></label></p>
                 <button type="submit">Enviar</button>
+                <p><label for="progreso"> Progreso envío: <progress value="25" max="100">0%</progress></label></p>
             </form>
         </fieldset>
         <fieldset>
