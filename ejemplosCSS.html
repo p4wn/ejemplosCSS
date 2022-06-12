@@ -299,14 +299,16 @@ details ul {
         <fieldset>
             <legend><span class="ejemplo">ejemplo</span></legend>
             <form action="url" method="post" enctype="multipart/form-data">
-                <p><label>Nombre: <input type="text" name="nombre" id="nombre" placeholder="Inserte el nombre" maxlength="20"></label></p>
+                <p><label>Nombre: <input type="text" name="nombre" id="nombre" placeholder="Inserte el nombre"
+                            maxlength="20"></label></p>
                 <p><label>Edad: <input type="number" name="edad" id="edad" value="33" min="18" max="100"></label></p>
                 <p><label>Correo: <input type="email" name="email" id="email"></label></p>
                 <p><label>Teléfono: <input type="tel"></label></p>
                 <p><label>Sitio web: <input type="url" name="url" id="url"></label></p>
                 <p><label for="range">Rango: <input type="range" name="range" id="range" min="0" max="100"></label></p>
                 <p>Rangos con radios:</p>
-                <p><label for="radio">25: <input type="radio" name="radioTest" id="radioTest1" value="25" checked></label></p>
+                <p><label for="radio">25: <input type="radio" name="radioTest" id="radioTest1" value="25"
+                            checked></label></p>
                 <p><label for="radio">50: <input type="radio" name="radioTest" id="radioTest2" value="50"></label></p>
                 <p><label for="radio">75: <input type="radio" name="radioTest" id="radioTest3" value="75"></label></p>
                 <p><label for="radio">100: <input type="radio" name="radioTest" id="radioTest4" value="100"></label></p>
@@ -317,7 +319,8 @@ details ul {
                 <p><label for="check">100 <input type="checkbox" name="check" id="check1"></label></p>
                 <p><label for="fecha">Fecha: <input type="date" name="fecha" id="fecha"></label></p>
                 <p><label for="color">Seleccione un color: <input type="color" name="color" id="color"></label></p>
-                <p><label for="texto">Texto: <textarea name="texto" id="texto" cols="30" rows="3"></textarea></label></p>
+                <p><label for="texto">Texto: <textarea name="texto" id="texto" cols="30" rows="3"></textarea></label>
+                </p>
                 <p><label for="lista">Listado select:</label>
                     <select name="listado" id="listado">
                         <option value="1">HTML</option>
@@ -363,6 +366,31 @@ details ul {
     &lt;button type="submit">Enviar&lt;/button>
 &lt;/form>
                  </code></pre>
+        </fieldset>
+        <hr>
+        <!-- -------------------------------------------------------------------------- -->
+        <h1>Transformaciones</h1>
+        <p>Para transformar una caja o texto, darle angulación, etc</p>
+        <fieldset>
+            <legend><span class="ejemplo">ejemplo</span></legend>
+            <h3 class="transformacion">Ejemplo transformación</h3>
+        </fieldset>
+        <fieldset>
+            <legend><span class="html">HTML</span></legend>
+            <pre>
+                 <code>
+                    &lt;h3 class="transformacion">Ejemplo transformación&lt;/h3>
+                 </code></pre>
+        </fieldset>
+        <fieldset>
+            <legend><span class="css">CSS</span></legend>
+            <pre>
+                <code>
+                    .transformacion {
+                        text-align: center;
+                        transform: perspective(500px) rotate3d(0,1,0,60deg);
+                    }
+                </code></pre>
         </fieldset>
         <hr>
         <!-- -------------------------------------------------------------------------- -->
