@@ -46,7 +46,7 @@
         <p>Centrar un bloque o cualquier elemento al centro</p>
         <fieldset>
             <legend><span class="ejemplo">ejemplo</span></legend>
-            <div class="flex-center">
+            <div class="grid-flex-center">
                 <p>Estos</p>
                 <p>textos</p>
                 <p>están centrados</p>
@@ -56,7 +56,7 @@
             <legend><span class="html">HTML</span></legend>
             <pre>
                 <code>
-&lt;div class="flex-center">
+&lt;div class="grid-flex-center">
     &lt;p>Estos&lt;/p>
     &lt;p>textos&lt;/p>
     &lt;p>están centrados&lt;/p>
@@ -67,11 +67,13 @@
             <legend><span class="css">CSS</span></legend>
             <pre>
                 <code>
-.flex-center {
-    display: flex;
+.grid-flex-center {
+    display: grid;
+    place-items: center;
+    /* display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
 }
                 </code></pre>
         </fieldset>
